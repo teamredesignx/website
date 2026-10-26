@@ -9,13 +9,22 @@ export const site = {
   country: "Australia",
 } as const;
 
-/** Production URL on Vercel, an explicit override, or localhost in development. */
+/** Public URL: an explicit override, GitHub Pages, Vercel production, or localhost in development. */
 export function getSiteUrl(): string {
   if (process.env.NEXT_PUBLIC_SITE_URL) return process.env.NEXT_PUBLIC_SITE_URL;
+  if (process.env.GITHUB_PAGES === "true") return "https://teamredesign.com";
   if (process.env.VERCEL_PROJECT_PRODUCTION_URL) {
     return `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`;
   }
   return "http://localhost:3000";
+}
+
+/**
+ * Prefixes a /public path with the base path. Next adds it for links and metadata,
+ * but not for plain <img> tags or unoptimised images, so those go through here.
+ */
+export function withBasePath(path: string): string {
+  return `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}${path}`;
 }
 
 export const socials = [

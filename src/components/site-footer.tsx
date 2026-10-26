@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { site, socials } from "@/lib/site";
+import { site, socials, withBasePath } from "@/lib/site";
 
 import styles from "./site-footer.module.css";
 
@@ -10,7 +10,12 @@ export function SiteFooter() {
       <div className={`wrap ${styles.inner}`}>
         <Link href="/" aria-label="Team Redesign, back to home">
           {/* eslint-disable-next-line @next/next/no-img-element -- a small static SVG needs no optimiser */}
-          <img src="/brand/team-redesign-lockup-paper.svg" alt="Team Redesign" width={186} height={38} />
+          <img
+            src={withBasePath("/brand/team-redesign-lockup-paper.svg")}
+            alt="Team Redesign"
+            width={186}
+            height={38}
+          />
         </Link>
         <ul className={styles.links} aria-label="Team Redesign on social platforms">
           {socials.map((social) => (

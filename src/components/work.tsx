@@ -3,6 +3,7 @@ import Image from "next/image";
 import { SectionTitle } from "@/components/ui/section-title";
 import { WorkPreview } from "@/components/work-preview";
 import { projects } from "@/lib/content";
+import { withBasePath } from "@/lib/site";
 
 import styles from "./work.module.css";
 
@@ -18,12 +19,12 @@ export function Work() {
             href={project.href}
             target="_blank"
             rel="noopener noreferrer"
-            data-preview={project.image}
+            data-preview={withBasePath(project.image)}
           >
             {/* Phones have no hover, so the screenshot is shown inline there. */}
             <Image
               className={styles.thumb}
-              src={project.image}
+              src={withBasePath(project.image)}
               alt={project.alt}
               width={1200}
               height={750}
