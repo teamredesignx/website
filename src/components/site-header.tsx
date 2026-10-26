@@ -1,7 +1,8 @@
 "use client";
 
-import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
+
+import { HomeLink } from "@/components/home-link";
 
 import { sendSiteLink, withBasePath } from "@/lib/site";
 
@@ -40,7 +41,7 @@ export function SiteHeader() {
   return (
     <header className={styles.header} data-scrolled={scrolled}>
       <div className={`wrap ${styles.inner}`}>
-        <Link href="/" className={styles.logo} aria-label="Team Redesign, back to home">
+        <HomeLink className={styles.logo} aria-label="Team Redesign, back to home">
           {/* The animated GIF is the brand logo. Reduced-motion visitors get the still SVG instead. */}
           <picture>
             <source
@@ -54,7 +55,7 @@ export function SiteHeader() {
               height={38}
             />
           </picture>
-        </Link>
+        </HomeLink>
         <nav className={styles.nav} aria-label="Sections">
           <a href="#work">Work</a>
           <a href="#process">Process</a>

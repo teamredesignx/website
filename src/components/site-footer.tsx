@@ -1,5 +1,4 @@
-import Link from "next/link";
-
+import { HomeLink } from "@/components/home-link";
 import { site, socials, withBasePath } from "@/lib/site";
 
 import styles from "./site-footer.module.css";
@@ -8,7 +7,7 @@ export function SiteFooter() {
   return (
     <footer className={styles.footer}>
       <div className={`wrap ${styles.inner}`}>
-        <Link href="/" aria-label="Team Redesign, back to home">
+        <HomeLink aria-label="Team Redesign, back to home">
           {/* eslint-disable-next-line @next/next/no-img-element -- a small static SVG needs no optimiser */}
           <img
             src={withBasePath("/brand/team-redesign-lockup-paper.svg")}
@@ -16,7 +15,7 @@ export function SiteFooter() {
             width={186}
             height={38}
           />
-        </Link>
+        </HomeLink>
         <ul className={styles.links} aria-label="Team Redesign on social platforms">
           {socials.map((social) => (
             <li key={social.label}>
