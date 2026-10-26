@@ -7,6 +7,8 @@ export const site = {
   email: "contact@teamredesign.com",
   locality: "Sydney",
   country: "Australia",
+  /** Fixed rather than new Date(), which Cache Components cannot prerender. Update each January. */
+  copyrightYear: 2026,
 } as const;
 
 /** Public URL: an explicit override, GitHub Pages, Vercel production, or localhost in development. */
