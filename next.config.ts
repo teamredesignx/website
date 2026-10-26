@@ -14,6 +14,20 @@ const nextConfig: NextConfig = {
     // The image optimiser needs a server, which static hosting does not have.
     images: { unoptimized: true },
   }),
+  // Vercel builds only: send the old *.vercel.app address to the live site on GitHub Pages.
+  // Static exports cannot redirect, and the live domain is not on this Vercel project.
+  ...(!isGitHubPages && {
+    async redirects() {
+      return [
+        {
+          source: "/:path*",
+          has: [{ type: "host" as const, value: "teamredesignx.vercel.app" }],
+          destination: "https://teamredesign.com/:path*",
+          permanent: true,
+        },
+      ];
+    },
+  }),
 };
 
 export default nextConfig;
