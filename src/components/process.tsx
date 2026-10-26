@@ -5,7 +5,7 @@ import styles from "./process.module.css";
 
 export function Process() {
   return (
-    <section className={styles.section} aria-labelledby="process-title">
+    <section id="process" className={styles.section} aria-labelledby="process-title">
       <div className="wrap">
         <SectionTitle id="process-title" lite="How we" bold="work" />
         <ol className={styles.steps}>

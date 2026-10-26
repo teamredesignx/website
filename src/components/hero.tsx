@@ -1,5 +1,6 @@
 import { Compare } from "@/components/compare/compare";
 import { AfterSite, BeforeSite } from "@/components/compare/example-site";
+import { Countdown } from "@/components/countdown";
 import { Button } from "@/components/ui/button";
 import { compare, hero } from "@/lib/content";
 import { sendSiteLink } from "@/lib/site";
@@ -14,6 +15,8 @@ export function Hero() {
         <span className={styles.pipe} aria-hidden="true" />
         <span className={`${styles.bold} t-bold`}>{hero.bold}</span>
       </h1>
+
+      <Countdown />
 
       <div className={styles.sub}>
         <p>{hero.lead}</p>

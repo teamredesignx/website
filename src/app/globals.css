@@ -5,6 +5,10 @@
   --stone: #8b8b95;
   --ink-soft: rgb(21 21 27 / 0.66);
   --line: rgb(21 21 27 / 0.2);
+  /* One signal colour, for time and progress only: countdown, scroll bar, step numbers. */
+  --signal: #2438ff;
+  --signal-light: #8f9bff;
+  --header-h: 76px;
 
   --font-display: var(--font-archivo), "Arial Narrow", sans-serif;
   --font-mono: var(--font-martian-mono), ui-monospace, monospace;
@@ -22,6 +26,8 @@
 html {
   color-scheme: light;
   scroll-behavior: smooth;
+  scroll-padding-top: var(--header-h);
+  -webkit-text-size-adjust: 100%;
 }
 
 body {

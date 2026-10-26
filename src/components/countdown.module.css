@@ -1,0 +1,48 @@
+.timer {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 6px clamp(14px, 3vw, 32px);
+  margin-top: clamp(28px, 4vw, 48px);
+}
+
+.number {
+  font-weight: 850;
+  font-stretch: 125%;
+  letter-spacing: -0.05em;
+  font-size: clamp(2.6rem, 7vw, 5.2rem);
+  line-height: 1;
+  color: var(--signal);
+  font-variant-numeric: tabular-nums;
+  min-width: 4.6ch;
+}
+
+.track {
+  height: 10px;
+  background: var(--line);
+  border-radius: 99px;
+  overflow: hidden;
+}
+
+.bar {
+  display: block;
+  height: 100%;
+  background: var(--signal);
+  border-radius: 99px;
+  transform-origin: 0 50%;
+}
+
+.note {
+  grid-column: 1 / -1;
+  color: var(--ink-soft);
+}
+
+.note[data-done="true"] {
+  color: var(--signal);
+}
+
+@media (max-width: 640px) {
+  .number {
+    min-width: 0;
+  }
+}

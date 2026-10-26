@@ -1,7 +1,7 @@
 .footer {
   background: var(--ink);
   color: var(--paper);
-  padding-block: 44px 36px;
+  padding-block: 44px max(36px, env(safe-area-inset-bottom));
 }
 
 .inner {

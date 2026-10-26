@@ -1,3 +1,4 @@
+import { BackToTop } from "@/components/back-to-top";
 import { Checks } from "@/components/checks";
 import { ClosingCta } from "@/components/closing-cta";
 import { Hero } from "@/components/hero";
@@ -23,6 +24,7 @@ export default function HomePage() {
         <ClosingCta />
       </main>
       <SiteFooter />
+      <BackToTop />
     </>
   );
 }
