@@ -28,6 +28,9 @@ export function SiteFooter() {
         <p className={`${styles.note} t-mono`}>
           {site.name}, {site.locality}, {site.country}. The plumbing example above is fictional.
         </p>
+        <p className={`${styles.copyright} t-mono`}>
+          &copy; {new Date().getFullYear()} {site.name}. All rights reserved.
+        </p>
       </div>
     </footer>
   );
