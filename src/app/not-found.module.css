@@ -1,0 +1,10 @@
+.main {
+  padding-block: clamp(64px, 12vw, 160px);
+  display: grid;
+  justify-items: start;
+  gap: 24px;
+}
+
+.title {
+  font-size: clamp(2.5rem, 8vw, 6rem);
+}

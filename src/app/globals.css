@@ -1,0 +1,98 @@
+:root {
+  /* Brand colours: the logo is always one solid colour, ink or paper. Stone is for supporting text only. */
+  --ink: #15151b;
+  --paper: #f2f2ef;
+  --stone: #8b8b95;
+  --ink-soft: rgb(21 21 27 / 0.66);
+  --line: rgb(21 21 27 / 0.2);
+
+  --font-display: var(--font-archivo), "Arial Narrow", sans-serif;
+  --font-mono: var(--font-martian-mono), ui-monospace, monospace;
+
+  --gutter: clamp(20px, 4vw, 48px);
+  --max: 1240px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: light;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-stretch: 92%;
+  font-size: 1rem;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 3px solid var(--ink);
+  outline-offset: 3px;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1;
+}
+
+/* Layout */
+.wrap {
+  width: min(var(--max), 100% - var(--gutter) * 2);
+  margin-inline: auto;
+}
+
+/* Type: the logo's narrow-light and wide-heavy pair, plus the mono label face. */
+.t-lite {
+  font-weight: 300;
+  font-stretch: 62%;
+  letter-spacing: -0.01em;
+}
+
+.t-bold {
+  font-weight: 850;
+  font-stretch: 125%;
+  letter-spacing: -0.035em;
+}
+
+.t-mono {
+  font-family: var(--font-mono);
+  font-weight: 400;
+  font-stretch: 100%;
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  line-height: 1.5;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  * {
+    transition: none !important;
+  }
+}

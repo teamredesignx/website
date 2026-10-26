@@ -1,0 +1,31 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 18px;
+}
+
+.logo {
+  display: block;
+  line-height: 0;
+}
+
+.logo img {
+  display: block;
+  height: 38px;
+  width: auto;
+}
+
+.mail {
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  border-bottom: 2px solid var(--ink);
+  padding-block: 10px 2px;
+}
+
+@media (max-width: 640px) {
+  .logo img {
+    height: 32px;
+  }
+}

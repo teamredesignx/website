@@ -1,0 +1,19 @@
+.title {
+  font-size: clamp(2rem, 4.6vw, 3.7rem);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: 0.22em;
+  margin-bottom: clamp(28px, 4vw, 52px);
+}
+
+.lite {
+  font-size: 1.1em;
+}
+
+.pipe {
+  width: 0.08em;
+  height: 0.78em;
+  background: currentcolor;
+  flex: none;
+}
